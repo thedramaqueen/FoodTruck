@@ -17,11 +17,11 @@ public class SendOrderTransform : Singleton<SendOrderTransform>
             {
                 if (chefList.Count > 0)
                 {
-                    chefList[0].currentProduct.GoToOwner(tray.transform, new Vector3(0, 0.15f, 0));
-                    chefList[0].currentProduct.currentTray = tray;
+                    chefList[0].currentOrderProduct.GoToOwner(tray.transform, new Vector3(0, 0.15f, 0));
+                    chefList[0].currentOrderProduct.currentTray = tray;
                     //Chef.Instance.currentProduct.GoToOwner(tray.transform, new Vector3(0, 0.15f, 0));
 
-                    tray.currentProduct = chefList[0].currentProduct;
+                    tray.currentOrderProduct = chefList[0].currentOrderProduct;
                     //tray.currentProduct = Chef.Instance.currentProduct;
                     tray.isEmpty = false;
                     //isOccupied = false;

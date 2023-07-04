@@ -104,10 +104,10 @@ public class ChefTakingOrderController : MonoBehaviour
                         _machine.CreateOrder();
                         _chefOrderController.OrderCompletedAction();
                         //EventManager.OnMakeOrder.Invoke();
-                        _machine.product.GoToOwner(productParent, Vector3.zero);
-                        _machine.product.SetCustomer(chef.chefOrderController.customerList[0]);
-                        chef.chefOrderController.customerList[0].currentProduct = _machine.product;
-                        chef.currentProduct = GetComponentInChildren<Product>();
+                        _machine.orderProduct.GoToOwner(productParent, Vector3.zero);
+                        _machine.orderProduct.SetCustomer(chef.chefOrderController.customerList[0]);
+                        chef.chefOrderController.customerList[0].currentOrderProduct = _machine.orderProduct;
+                        chef.currentOrderProduct = GetComponentInChildren<OrderProduct>();
                         chef.isOccupied = true;
                         //Chef.Instance.currentProduct = GetComponentInChildren<Product>();
                         //Chef.Instance.isOccupied = true;

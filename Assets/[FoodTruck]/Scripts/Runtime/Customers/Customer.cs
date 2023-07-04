@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Customer : MonoBehaviour
@@ -16,7 +17,7 @@ public class Customer : MonoBehaviour
     public bool isLeft;
 
     public Vector3 destinationTarget;
-    public Product currentProduct;
+    [FormerlySerializedAs("currentProduct")] public OrderProduct currentOrderProduct;
     public CustomerUISetter customerUISetter;
     
     [SerializeField] private TMP_Text countText;
@@ -50,7 +51,7 @@ public class Customer : MonoBehaviour
             {
                 TakeAction();
                 isLeft = true;
-                currentProduct.ControlCustomer();
+                currentOrderProduct.ControlCustomer();
                 Debug.Log("musteri kacti...");
             });
         });

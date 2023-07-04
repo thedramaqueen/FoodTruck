@@ -10,7 +10,7 @@ public class Machine : MachineBase
     {
         var order = Instantiate(productPrefab, productParent);
 
-        product = order.GetComponent<Product>();
+        orderProduct = order.GetComponent<OrderProduct>();
     }
 
     public void ActivateMachine()

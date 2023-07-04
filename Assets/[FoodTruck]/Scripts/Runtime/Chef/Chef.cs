@@ -1,11 +1,12 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Chef : MonoBehaviour
 {
     public int chefID;
     
-    public Product currentProduct = null;
+    [FormerlySerializedAs("currentProduct")] public OrderProduct currentOrderProduct = null;
    
     public Transform sendOrderTransform;
 
@@ -39,7 +40,7 @@ public class Chef : MonoBehaviour
 
     public void CompleteOrder()
     {
-        currentProduct = null;
+        currentOrderProduct = null;
         isOccupied = false;
         //isAvailable = true;
     }

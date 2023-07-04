@@ -14,10 +14,10 @@ public class TrayCollider : MonoBehaviour
             if (!Tray.isEmpty && other.transform.GetComponentInParent<Customer>().isOrdered)
             {
                 // Tabakta ki Urunu Musteriye Ver
-                if (Tray.currentProduct.currentCustomer == other.transform.GetComponentInParent<Customer>())
+                if (Tray.currentOrderProduct.currentCustomer == other.transform.GetComponentInParent<Customer>())
                 {
                     Debug.Log("dogru musteri");
-                    Tray.currentProduct.GoToOwner(other.transform.GetComponentInParent<Customer>().transform.GetChild(0), new Vector3(0, 1, 0.5f));
+                    Tray.currentOrderProduct.GoToOwner(other.transform.GetComponentInParent<Customer>().transform.GetChild(0), new Vector3(0, 1, 0.5f));
                     other.transform.GetComponentInParent<Customer>().SetOrderText();
                     Tray.isEmpty = true;
 

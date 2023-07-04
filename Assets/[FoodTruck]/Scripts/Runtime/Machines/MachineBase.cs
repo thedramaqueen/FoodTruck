@@ -12,7 +12,7 @@ public class MachineBase : MonoBehaviour
     public GameObject unlockPanel;
     public GameObject arrowPanel;
     public GameObject lockPanel;
-    public Product product;
+    [FormerlySerializedAs("product")] public OrderProduct orderProduct;
 
     public EconomiController economiController;
     

@@ -11,7 +11,7 @@ public class ControlPointTransform : MonoBehaviour
       {
          Tray tray = other.GetComponent<Tray>();
          if(!tray.isEmpty)
-            tray.currentProduct.ControlCustomer();
+            tray.currentOrderProduct.ControlCustomer();
       }
    }
 }
